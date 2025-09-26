@@ -1,38 +1,34 @@
-# sv
+# Frontend (SvelteKit) UI
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+The frontend is built with **SvelteKit**, featuring a **ChatGPT-like interface** for interacting with Baymax. It uses **Tailwind CSS** for utility-first styling and **DaisyUI** components for a clean, interactive design.
 
-## Creating a project
+### Features
 
-If you're seeing this, you've probably already done this step. Congrats!
+- **Chat interface**: Input field, send button, and chat bubbles for messages.
+- **Responsive layout**: Works well on desktop and mobile.
+- **DaisyUI components**: Chat bubbles, buttons, and forms for fast UI development.
+- **Real-time interaction**: Sends messages to the FastAPI backend and displays Baymax responses instantly.
 
-```sh
-# create a new project in the current directory
-npx sv create
+### Installation
 
-# create a new project in my-app
-npx sv create my-app
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```sh
+```bash
+cd frontend
+npm install
 npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
 ```
 
-## Building
+Open your browser at `http://localhost:5173`.
 
-To create a production version of your app:
+### Example Usage
 
-```sh
-npm run build
-```
+- Type a message into the input box (e.g., `"Hello Baymax"`) and press Enter or click Send.
+- Baymax responds according to the **Baymax system prompt**, starting with:
+  `"Are you physically or emotionally in pain?"`
+- Continue the conversation, and Baymax remembers previous messages in the session.
 
-You can preview the production build with `npm run preview`.
+### Tailwind & DaisyUI Integration
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+- Tailwind is used for layout, spacing, and typography.
+- DaisyUI provides ready-made components for chat bubbles and buttons:
+
+This setup gives a **clean, interactive chat interface** that works seamlessly with the FastAPI backend.
